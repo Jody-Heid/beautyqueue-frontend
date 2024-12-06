@@ -1,0 +1,1 @@
+# beautyqueue-frontend
