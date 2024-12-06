@@ -1,6 +1,6 @@
 const appConfig = {
-  appName: "Studio Admin",
-  appShortName: "SA",
+  appName: "BeautyQueue",
+  appShortName: "BQ",
 }
 
 export default appConfig
