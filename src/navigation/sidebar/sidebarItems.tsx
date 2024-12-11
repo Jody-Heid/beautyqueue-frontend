@@ -1,4 +1,15 @@
-import { File, Inbox, Send, Receipt, KeySquare, LucideIcon, PanelsTopLeft } from "lucide-react"
+import { 
+  Users, 
+  Calendar, 
+  Settings, 
+  Building2, 
+  UserCog,
+  Shield,
+  PanelsTopLeft,
+  BellRing,
+  XCircle,
+  LucideIcon
+} from "lucide-react"
 
 export interface NavSubItem {
   title: string
@@ -36,51 +47,76 @@ export const sidebarItems: NavGroup[] = [
   },
   {
     id: 2,
-    label: "Apps & Pages",
+    label: "Appointments",
     items: [
       {
-        title: "Inbox",
-        path: `${basePath}/inbox`,
-        icon: Inbox,
-      },
-      {
-        title: "Invoice",
-        path: "#",
-        icon: Receipt,
+        title: "Appointments",
+        path: `${basePath}/appointments`,
+        icon: Calendar,
         subItems: [
-          { title: "List", path: `${basePath}/invoice/list-preview` },
-          { title: "View", path: `${basePath}/invoice/view` },
-          { title: "Add", path: `${basePath}/invoice/add` },
-          { title: "Edit", path: `${basePath}/invoice/edit` },
-        ],
-      },
-      {
-        title: "Auth",
-        path: "#",
-        icon: KeySquare,
-        subItems: [{ title: "Unauthorized", path: `${basePath}/auth/unauthorized` }],
-      },
-      {
-        title: "Drafts",
-        path: `${basePath}/drafts`,
-        icon: File,
-      },
-      {
-        title: "Sent",
-        path: `${basePath}/sent`,
-        icon: Send,
+          { title: "New", path: `${basePath}/appointments/new` },
+          { title: "All Appointments", path: `${basePath}/appointments/all` },
+          { title: "Failed Jobs", path: `${basePath}/appointments/failed` },
+        ]
       },
     ],
   },
   {
     id: 3,
-    label: "Billing",
+    label: "User Management",
     items: [
       {
-        title: "Billing",
-        path: `${basePath}/billing`,
-        icon: Receipt,
+        title: "Users",
+        path: `${basePath}/users`,
+        icon: Users,
+      },
+      {
+        title: "Staff",
+        path: `${basePath}/staff`,
+        icon: UserCog,
+      },
+      {
+        title: "Tenants",
+        path: `${basePath}/tenants`,
+        icon: Building2,
+      }
+    ],
+  },
+  {
+    id: 4,
+    label: "Access Control",
+    items: [
+      {
+        title: "Roles & Permissions",
+        path: "#",
+        icon: Shield,
+        subItems: [
+          { title: "Roles", path: `${basePath}/roles` },
+          { title: "Permissions", path: `${basePath}/permissions` },
+          { title: "Role Permissions", path: `${basePath}/role-permissions` },
+        ]
+      },
+      {
+        title: "Access Tokens",
+        path: `${basePath}/personal-tokens`,
+        icon: Settings
       },
     ],
   },
+  {
+    id: 5,
+    label: "Services",
+    items: [
+      {
+        title: "Offered Services",
+        path: `${basePath}/services`,
+        icon: BellRing,
+      },
+      {
+        title: "Failed Jobs",
+        path: `${basePath}/failed-jobs`,
+        icon: XCircle,
+      }
+    ],
+  }
 ]
